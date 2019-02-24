@@ -11,6 +11,7 @@ This plugin provides a [Messagebird](https://www.messagebird.com/) integration f
 > The next services are in progress
 
 - Voice features
+- Report features (to view in CP)
 
 ## Requirements
 
