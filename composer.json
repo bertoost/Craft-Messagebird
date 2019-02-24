@@ -1,0 +1,35 @@
+{
+  "name": "bertoost/craft-messagebird",
+  "description": "Craft 3 CMS plugin for Messagebird messaging features.",
+  "type": "craft-plugin",
+  "version": "1.0.0-alpha",
+  "keywords": [
+    "craft",
+    "craftcms",
+    "plugin",
+    "craftcms plugin",
+    "messagebird",
+    "sms",
+    "whatsapp"
+  ],
+  "homepage": "https://github.com/bertoost/Craft-3-Messagebird",
+  "license": "MIT",
+  "require": {
+    "php": "^7.2",
+    "craftcms/cms": "^3.1.5",
+    "messagebird/php-rest-api": "^1.13"
+  },
+  "autoload": {
+    "psr-4": {
+      "bertoost\\messagebird\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Messagebird",
+    "handle": "messagebird",
+    "hasCpSettings": true,
+    "developer": "Bert Oost",
+    "developerUrl": "https://bertoost.com",
+    "documentationUrl": "https://github.com/bertoost/Craft-3-Messagebird/blob/master/README.md"
+  }
+}
