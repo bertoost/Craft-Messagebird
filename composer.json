@@ -2,7 +2,7 @@
   "name": "bertoost/craft-messagebird",
   "description": "Craft 3 CMS plugin for Messagebird messaging features.",
   "type": "craft-plugin",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0",
   "keywords": [
     "craft",
     "craftcms",
