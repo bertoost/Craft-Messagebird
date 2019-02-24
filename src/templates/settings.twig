@@ -1,0 +1,22 @@
+{% import "_includes/forms" as forms -%}
+
+{{ forms.textField({
+    name: 'apiKey',
+    label: 'API Key'|t('messagebird'),
+    instructions: 'The API key used to make connection to the REST API of Messagebird.'|t('messagebird'),
+    value: settings.apiKey,
+    errors: settings.getErrors('apiKey'),
+    required: true,
+    first: true
+}) }}
+
+<hr>
+
+{{ forms.textField({
+    name: 'smsOriginator',
+    label: 'SMS Originator Name'|t('messagebird'),
+    instructions: 'The name of the SMS originator. Max. length is 11 characters.'|t('messagebird'),
+    value: settings.smsOriginator,
+    errors: settings.getErrors('smsOriginator'),
+    required: true
+}) }}
