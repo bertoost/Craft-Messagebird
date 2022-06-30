@@ -16,11 +16,6 @@ class Plugin extends BasePlugin
     use PluginComponentsTrait;
 
     /**
-     * @var bool
-     */
-    public $hasCpSection = true;
-
-    /**
      * {@inheritdoc}
      */
     public function init()

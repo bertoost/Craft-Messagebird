@@ -15,7 +15,7 @@
   "homepage": "https://github.com/bertoost/Craft-3-Messagebird",
   "license": "MIT",
   "require": {
-    "php": "^7.2",
+    "php": "^7.2 || ^8.0 || ^8.1",
     "craftcms/cms": "^3.1.5",
     "messagebird/php-rest-api": "^1.13"
   },
@@ -27,7 +27,7 @@
   "extra": {
     "name": "Messagebird",
     "handle": "messagebird",
-    "hasCpSettings": true,
+    "hasCpSettings": false,
     "developer": "Bert Oost",
     "developerUrl": "https://bertoost.com",
     "documentationUrl": "https://github.com/bertoost/Craft-3-Messagebird/blob/master/README.md"
