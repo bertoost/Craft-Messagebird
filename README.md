@@ -1,6 +1,6 @@
 <p align="center"><img src="./docs/logo.svg" width="300" alt="Messagebird for Craft CMS icon"></p>
 
-<h1 align="center">Messagebird for Craft CMS 3</h1>
+<h1 align="center">Messagebird for Craft CMS</h1>
 
 This plugin provides a [Messagebird](https://www.messagebird.com/) integration for [Craft CMS](https://craftcms.com/).
 
