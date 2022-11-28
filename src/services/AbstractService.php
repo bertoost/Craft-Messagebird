@@ -6,32 +6,18 @@ use bertoost\messagebird\models\Settings;
 use bertoost\messagebird\Plugin;
 use Craft;
 use craft\base\Component;
+use craft\helpers\App;
 use MessageBird\Client;
 
-/**
- * Class AbstractService
- */
 class AbstractService extends Component
 {
-    /**
-     * @var Settings
-     */
-    public $settings;
+    public Settings $settings;
 
-    /**
-     * @var Client
-     */
-    public $messagebird;
+    public Client $messagebird;
 
-    /**
-     * @var bool
-     */
-    public $enabled = true;
+    public bool $enabled = true;
 
-    /**
-     * {@inheritdoc}
-     */
-    public function init()
+    public function init(): void
     {
         parent::init();
 
@@ -40,7 +26,6 @@ class AbstractService extends Component
 
             // set failure notice
             if (!Craft::$app->getRequest()->getIsAjax()) {
-
                 Craft::$app->getSession()->setNotice(Craft::t('messagebird', 'Please configure the Messagebird settings.'));
             }
 
@@ -52,6 +37,6 @@ class AbstractService extends Component
         }
 
         // start new Messagebird Client
-        $this->messagebird = new Client($this->settings->apiKey);
+        $this->messagebird = new Client(App::parseEnv($this->settings->apiKey));
     }
 }

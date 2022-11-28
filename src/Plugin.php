@@ -5,20 +5,17 @@ namespace bertoost\messagebird;
 use bertoost\messagebird\models\Settings;
 use bertoost\messagebird\traits\PluginComponentsTrait;
 use Craft;
+use craft\base\Model;
 use craft\base\Plugin as BasePlugin;
 use craft\i18n\PhpMessageSource;
 
-/**
- * Class Plugin
- */
 class Plugin extends BasePlugin
 {
     use PluginComponentsTrait;
 
-    /**
-     * {@inheritdoc}
-     */
-    public function init()
+    public bool $hasCpSettings = true;
+
+    public function init(): void
     {
         Craft::setAlias('@bertoost\messagebird', $this->getBasePath());
 
@@ -31,7 +28,7 @@ class Plugin extends BasePlugin
     /**
      * Registers translation definition
      */
-    private function registerTranslations()
+    private function registerTranslations(): void
     {
         Craft::$app->i18n->translations['messagebird*'] = [
             'class'          => PhpMessageSource::class,
@@ -45,22 +42,17 @@ class Plugin extends BasePlugin
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    protected function createSettingsModel()
+    protected function createSettingsModel(): ?Model
     {
         return new Settings();
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    protected function settingsHtml()
+    protected function settingsHtml(): ?string
     {
+        /** @var Settings $settings */
         $settings = $this->getSettings();
-        if (empty($settings->smsOriginator)) {
 
+        if (empty($settings->smsOriginator)) {
             $systemName = Craft::$app->getSystemName();
             $systemName = preg_replace('/[^a-zA-Z0-9]+/', '', $systemName);
 
