@@ -4,9 +4,6 @@ namespace bertoost\messagebird\traits;
 
 use bertoost\messagebird\services\SmsService;
 
-/**
- * Trait PluginComponentsTrait
- */
 trait PluginComponentsTrait
 {
     /**
@@ -21,8 +18,6 @@ trait PluginComponentsTrait
 
     /**
      * Returns the SMS Service
-     *
-     * @return SmsService
      */
     public function getSms(): SmsService
     {

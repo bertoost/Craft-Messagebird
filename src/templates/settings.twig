@@ -1,12 +1,13 @@
 {% import "_includes/forms" as forms -%}
 
-{{ forms.textField({
+{{ forms.autosuggestField({
     name: 'apiKey',
     label: 'API Key'|t('messagebird'),
     instructions: 'The API key used to make connection to the REST API of Messagebird.'|t('messagebird'),
     value: settings.apiKey,
     errors: settings.getErrors('apiKey'),
     required: true,
+    suggestEnvVars: true,
     first: true
 }) }}
 

@@ -4,25 +4,13 @@ namespace bertoost\messagebird\models;
 
 use craft\base\Model;
 
-/**
- * Class Settings
- */
 class Settings extends Model
 {
-    /**
-     * @var string
-     */
-    public $apiKey;
+    public string $apiKey = '';
 
-    /**
-     * @var string
-     */
-    public $smsOriginator;
+    public string $smsOriginator = '';
 
-    /**
-     * {@inheritdoc}
-     */
-    public function rules()
+    public function rules(): array
     {
         return [
             [['apiKey', 'smsOriginator'], 'required'],
