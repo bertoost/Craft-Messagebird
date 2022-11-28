@@ -1,4 +1,10 @@
-# Craft CMS 3 - Messagebird
+# Craft CMS - Messagebird
+
+## v2.0.0 - 2022-11-28
+
+### Changed
+
+- Updated plugin for Craft 4 [#3]
 
 ## v1.0.1 - 2022-06-30
 
