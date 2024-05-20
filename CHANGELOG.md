@@ -1,5 +1,11 @@
 # Craft CMS - Messagebird
 
+## v2.1.0 - 2024-05-20
+
+### Changed
+
+- Updated plugin for Craft 5 [#4]
+
 ## v2.0.0 - 2022-11-28
 
 ### Changed
